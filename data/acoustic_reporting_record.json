@@ -1,0 +1,87 @@
+{
+  "record_id": "prescribed_acoustic_operator_v1",
+  "claim": "A smaller field error can produce a larger receiver mismatch in a specified physical operator",
+  "scope": "Illustrative deterministic counterexample; not a forecast comparison or operational validation",
+  "tested_tiers": [
+    4
+  ],
+  "items": [
+    {
+      "id": "M01",
+      "status": "reported",
+      "detail": "Prescribed profiles; no issue-time forecast or future observations are used.",
+      "artifacts": [
+        "data/acoustic_spec.json"
+      ]
+    },
+    {
+      "id": "M02",
+      "status": "reported",
+      "detail": "Depth 0-200 m at 0.25 m spacing; 33 receivers; both boundaries pressure release; density constant.",
+      "artifacts": [
+        "data/acoustic_spec.json"
+      ]
+    },
+    {
+      "id": "M03",
+      "status": "not_applicable",
+      "detail": "No learned component; errors are prescribed directions scaled by depth RMS.",
+      "artifacts": []
+    },
+    {
+      "id": "M04",
+      "status": "reported",
+      "detail": "Sine-Galerkin Helmholtz eigenproblem and outgoing cylindrical Hankel functions; no ocean time integration.",
+      "artifacts": [
+        "scripts/acoustic_example.py"
+      ]
+    },
+    {
+      "id": "M05",
+      "status": "not_applicable",
+      "detail": "No prognostic ocean or ice inventory is evolved. Manufactured budget checks verify diagnostics only; they do not establish conservation of an ocean model.",
+      "artifacts": [
+        "results/physical_diagnostics.json"
+      ]
+    },
+    {
+      "id": "M06",
+      "status": "reported",
+      "detail": "Both perturbation shapes share the reference profile and receiver operator; the unequal pair was selected after exploration.",
+      "artifacts": [
+        "data/acoustic_sensitivity_spec.json"
+      ]
+    },
+    {
+      "id": "M07",
+      "status": "reported",
+      "detail": "Tier 4 operator illustration only. Computed reference, not field observations. Normalized mismatch excludes absolute common complex amplitude.",
+      "artifacts": [
+        "results/acoustic_contrast.csv"
+      ]
+    },
+    {
+      "id": "M08",
+      "status": "not_applicable",
+      "detail": "Deterministic numerical examples. Range samples are not independent environmental realizations; no statistical confidence interval is inferred.",
+      "artifacts": []
+    },
+    {
+      "id": "M09",
+      "status": "reported",
+      "detail": "Frequency and source-depth sensitivity; no trained weights or forecast-model transfer.",
+      "artifacts": [
+        "results/acoustic_operator_sensitivity.csv"
+      ]
+    },
+    {
+      "id": "M10",
+      "status": "reported",
+      "detail": "Exact local scripts and results supplied; no archive DOI yet assigned. Real forecast fields, seabed uncertainty and acoustic model ranking remain outside scope.",
+      "artifacts": [
+        "scripts/acoustic_sensitivity.py",
+        "results/acoustic_sensitivity.json"
+      ]
+    }
+  ]
+}

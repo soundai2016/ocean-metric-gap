@@ -1,0 +1,39 @@
+{
+  "perturbation_basis": "1, sqrt(2) cos(j pi z/H), j=1,...,d-1",
+  "dimension": 8,
+  "dimension_checks": [
+    4,
+    8,
+    12
+  ],
+  "frequency_hz": 100.0,
+  "source_depth_m": 50.0,
+  "ranges_m": [
+    10000.0,
+    20000.0,
+    30000.0
+  ],
+  "derivative_step_mps": 0.001,
+  "derivative_check_step_mps": 0.0005,
+  "report_basis_size": 128,
+  "check_basis_size": 192,
+  "witness_amplitudes_mps": [
+    0.001,
+    0.002,
+    0.005,
+    0.01,
+    0.025,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "bound_test_amplitude_mps": 0.01,
+  "bound_threshold_factors": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "selection": "The extreme generalized eigendirections define the pairs. All specified amplitudes and ranges are retained.",
+  "interpretation": "The cosine space is an error representation, not a conservation constraint on sound speed.",
+  "derivative_stencil": "fourth-order centered, offsets -2,-1,+1,+2"
+}

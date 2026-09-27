@@ -1,0 +1,311 @@
+{
+  "scope": "manufactured_quadratic_metrics",
+  "ocean_forecast_fields_used": false,
+  "records": [
+    {
+      "case": "isotropic",
+      "Q": [
+        [
+          3.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ],
+      "W": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "generalized_eigenvalues": [
+        3.0,
+        3.0
+      ],
+      "relative_tolerance": 1e-10,
+      "proportional_within_tolerance": true,
+      "positive_proportional_metric": true,
+      "resolved_anisotropy": false
+    },
+    {
+      "case": "anisotropic",
+      "Q": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          4.0
+        ]
+      ],
+      "W": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "generalized_eigenvalues": [
+        1.0,
+        4.0
+      ],
+      "relative_tolerance": 1e-10,
+      "proportional_within_tolerance": false,
+      "positive_proportional_metric": false,
+      "resolved_anisotropy": true,
+      "witnesses": [
+        {
+          "a": [
+            0.0,
+            0.7905694150420949
+          ],
+          "b": [
+            1.0,
+            0.0
+          ],
+          "field_squared_a": 0.6250000000000001,
+          "field_squared_b": 1.0,
+          "downstream_a": 2.5000000000000004,
+          "downstream_b": 1.0,
+          "amplitude": 1.0,
+          "relative_tolerance": 1e-10
+        },
+        {
+          "a": [
+            0.0,
+            0.00790569415042095
+          ],
+          "b": [
+            0.01,
+            0.0
+          ],
+          "field_squared_a": 6.250000000000001e-05,
+          "field_squared_b": 0.0001,
+          "downstream_a": 0.00025000000000000006,
+          "downstream_b": 0.0001,
+          "amplitude": 0.01,
+          "relative_tolerance": 1e-10
+        },
+        {
+          "a": [
+            0.0,
+            7.90569415042095e-05
+          ],
+          "b": [
+            0.0001,
+            0.0
+          ],
+          "field_squared_a": 6.250000000000002e-09,
+          "field_squared_b": 1e-08,
+          "downstream_a": 2.500000000000001e-08,
+          "downstream_b": 1e-08,
+          "amplitude": 0.0001,
+          "relative_tolerance": 1e-10
+        }
+      ]
+    },
+    {
+      "case": "semidefinite",
+      "Q": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          4.0
+        ]
+      ],
+      "W": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "generalized_eigenvalues": [
+        0.0,
+        4.0
+      ],
+      "relative_tolerance": 1e-10,
+      "proportional_within_tolerance": false,
+      "positive_proportional_metric": false,
+      "resolved_anisotropy": true,
+      "witnesses": [
+        {
+          "a": [
+            0.0,
+            0.7071067811865476
+          ],
+          "b": [
+            1.0,
+            0.0
+          ],
+          "field_squared_a": 0.5000000000000001,
+          "field_squared_b": 1.0,
+          "downstream_a": 2.0000000000000004,
+          "downstream_b": 0.0,
+          "amplitude": 1.0,
+          "relative_tolerance": 1e-10
+        },
+        {
+          "a": [
+            0.0,
+            0.007071067811865476
+          ],
+          "b": [
+            0.01,
+            0.0
+          ],
+          "field_squared_a": 5.0000000000000016e-05,
+          "field_squared_b": 0.0001,
+          "downstream_a": 0.00020000000000000006,
+          "downstream_b": 0.0,
+          "amplitude": 0.01,
+          "relative_tolerance": 1e-10
+        },
+        {
+          "a": [
+            0.0,
+            7.071067811865475e-05
+          ],
+          "b": [
+            0.0001,
+            0.0
+          ],
+          "field_squared_a": 5e-09,
+          "field_squared_b": 1e-08,
+          "downstream_a": 2e-08,
+          "downstream_b": 0.0,
+          "amplitude": 0.0001,
+          "relative_tolerance": 1e-10
+        }
+      ]
+    },
+    {
+      "case": "zero_response",
+      "Q": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "W": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "generalized_eigenvalues": [
+        0.0,
+        0.0
+      ],
+      "relative_tolerance": 1e-10,
+      "proportional_within_tolerance": true,
+      "positive_proportional_metric": false,
+      "resolved_anisotropy": false
+    },
+    {
+      "case": "changed_coordinates",
+      "Q": [
+        [
+          1.16,
+          1.66
+        ],
+        [
+          1.66,
+          11.649999999999999
+        ]
+      ],
+      "W": [
+        [
+          1.04,
+          0.64
+        ],
+        [
+          0.64,
+          2.98
+        ]
+      ],
+      "generalized_eigenvalues": [
+        0.9999999999999998,
+        3.999999999999999
+      ],
+      "relative_tolerance": 1e-10,
+      "proportional_within_tolerance": false,
+      "positive_proportional_metric": false,
+      "resolved_anisotropy": true,
+      "witnesses": [
+        {
+          "a": [
+            -0.14461635641013915,
+            0.48205452136713095
+          ],
+          "b": [
+            -1.0365853658536586,
+            0.12195121951219516
+          ],
+          "field_squared_a": 0.625,
+          "field_squared_b": 1.0,
+          "downstream_a": 2.4999999999999996,
+          "downstream_b": 0.9999999999999999,
+          "amplitude": 1.0,
+          "relative_tolerance": 1e-10
+        },
+        {
+          "a": [
+            -0.0014461635641013916,
+            0.00482054521367131
+          ],
+          "b": [
+            -0.010365853658536586,
+            0.0012195121951219517
+          ],
+          "field_squared_a": 6.249999999999999e-05,
+          "field_squared_b": 0.0001,
+          "downstream_a": 0.00024999999999999995,
+          "downstream_b": 0.00010000000000000002,
+          "amplitude": 0.01,
+          "relative_tolerance": 1e-10
+        },
+        {
+          "a": [
+            -1.4461635641013917e-05,
+            4.8205452136713096e-05
+          ],
+          "b": [
+            -0.00010365853658536586,
+            1.2195121951219516e-05
+          ],
+          "field_squared_a": 6.249999999999999e-09,
+          "field_squared_b": 1.0000000000000004e-08,
+          "downstream_a": 2.4999999999999996e-08,
+          "downstream_b": 1.0000000000000002e-08,
+          "amplitude": 0.0001,
+          "relative_tolerance": 1e-10
+        }
+      ]
+    }
+  ]
+}

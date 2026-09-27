@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0",
+  "purpose": "Minimum reporting set; completeness is not a scientific quality score",
+  "allowed_statuses": [
+    "reported",
+    "unreported",
+    "not_applicable"
+  ],
+  "tiers": {
+    "1": "Offline approximation",
+    "2": "Initialized evolution",
+    "3": "Long coupled integration",
+    "4": "Downstream physical response"
+  },
+  "items": [
+    {
+      "id": "M01",
+      "name": "Information"
+    },
+    {
+      "id": "M02",
+      "name": "State and support"
+    },
+    {
+      "id": "M03",
+      "name": "Learned target"
+    },
+    {
+      "id": "M04",
+      "name": "Receiving dynamics"
+    },
+    {
+      "id": "M05",
+      "name": "Physical budgets"
+    },
+    {
+      "id": "M06",
+      "name": "Comparator"
+    },
+    {
+      "id": "M07",
+      "name": "Verification"
+    },
+    {
+      "id": "M08",
+      "name": "Replication"
+    },
+    {
+      "id": "M09",
+      "name": "Transfer"
+    },
+    {
+      "id": "M10",
+      "name": "Downstream and release"
+    }
+  ]
+}

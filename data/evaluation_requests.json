@@ -1,0 +1,18 @@
+[
+  {
+    "record_id": "mom6_closure_followup",
+    "claimed_tests": [3],
+    "comparison_target": "matched_information",
+    "prognostic_correction": true,
+    "probabilistic_claim": false,
+    "transfer_condition": "horizontal grid spacing"
+  },
+  {
+    "record_id": "prescribed_acoustic_operator",
+    "claimed_tests": [4],
+    "comparison_target": "matched_information",
+    "prognostic_correction": false,
+    "probabilistic_claim": false,
+    "transfer_condition": null
+  }
+]

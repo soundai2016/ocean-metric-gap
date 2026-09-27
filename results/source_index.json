@@ -1,0 +1,106 @@
+{
+  "oceannet": {
+    "source_id": "oceannet",
+    "citation_key": "chattopadhyay2024oceannet",
+    "url": "https://www.nature.com/articles/s41598-024-72145-0",
+    "version": "Scientific Reports 14, article 21181 (2024); publisher HTML",
+    "validation_scope": "metadata_consistency_only",
+    "locator": "Results: Loop Current forecasts and Gulf Stream forecasts; Methods: OceanNet and training data"
+  },
+  "xihe": {
+    "source_id": "xihe",
+    "citation_key": "wang2024xihe",
+    "url": "https://arxiv.org/html/2402.02995v4",
+    "version": "arXiv:2402.02995v4, 22 October 2024",
+    "validation_scope": "metadata_consistency_only",
+    "locator": "Sections III.A-B, IV.A and IV.E-F, V.A-D"
+  },
+  "seacast": {
+    "source_id": "seacast",
+    "citation_key": "holmberg2025seacast",
+    "url": "https://www.nature.com/articles/s41598-025-31177-w",
+    "version": "Scientific Reports 15, article 45051 (2025); publisher HTML",
+    "validation_scope": "metadata_consistency_only",
+    "locator": "Results: Comparing SeaCast to the operational MedFS, Effect of training period; Methods: Dataset/Ocean state"
+  },
+  "njord": {
+    "source_id": "njord",
+    "citation_key": "holmberg2026njord",
+    "url": "https://arxiv.org/html/2605.15470v2",
+    "version": "arXiv:2605.15470v2, 28 May 2026; preprint",
+    "validation_scope": "metadata_consistency_only",
+    "locator": "Sections 5.1-5.2; Appendix E.4, E.6 and E.9"
+  },
+  "fuxions": {
+    "source_id": "fuxions",
+    "citation_key": "huang2026fuxions",
+    "url": "https://arxiv.org/html/2603.19591v1",
+    "version": "arXiv:2603.19591v1, 20 March 2026; preprint",
+    "validation_scope": "metadata_consistency_only",
+    "locator": "Sections 2.1-2.3 and 4.3-4.6"
+  },
+  "samudra": {
+    "source_id": "samudra",
+    "citation_key": "dheeshjith2025samudra",
+    "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL114318",
+    "version": "Geophysical Research Letters 52(10), e2024GL114318 (2025); version of record",
+    "validation_scope": "metadata_consistency_only",
+    "locator": "Sections 2.1-2.5 and 3.1-3.2; Figure 2 and supporting Figure S9"
+  },
+  "samudra2": {
+    "source_id": "samudra2",
+    "citation_key": "yuan2026samudra2",
+    "url": "https://arxiv.org/html/2606.02610v2",
+    "version": "arXiv:2606.02610v2, 21 June 2026; preprint",
+    "validation_scope": "metadata_consistency_only",
+    "locator": "Sections 3.5 and 4.1-4.5; Figure 4b (detrended global-mean temperature); Appendix A.4"
+  },
+  "gz": {
+    "source_id": "gz",
+    "citation_key": "guillaumin2021stochastic",
+    "url": "https://repository.library.noaa.gov/view/noaa/32958/noaa_32958_DS1.pdf",
+    "version": "JAMES 13, e2021MS002534 (2021); NOAA archived published PDF",
+    "validation_scope": "metadata_consistency_only",
+    "locator": "Sections 2-3 (offline forcing); Section 4 (online shallow-water tests)"
+  },
+  "zhang": {
+    "source_id": "zhang",
+    "citation_key": "zhang2023implementation",
+    "url": "https://arxiv.org/html/2303.00962v1",
+    "version": "arXiv:2303.00962v1, 2 March 2023; subsequently JAMES doi:10.1029/2023MS003697",
+    "validation_scope": "metadata_consistency_only",
+    "locator": "Sections 2.3, 3.1-3.4, 4.1-4.5; Table 2"
+  },
+  "perezhogin2025": {
+    "source_id": "perezhogin2025",
+    "citation_key": "perezhogin2025generalizable",
+    "url": "https://arxiv.org/html/2505.08900v6",
+    "version": "arXiv:2505.08900v6, 24 September 2025; companion to GRL 52, e2025GL117046",
+    "validation_scope": "metadata_consistency_only",
+    "locator": "Sections 3.3 and 5.1 (Offline generalization); Figure 1(b-d)"
+  },
+  "finn": {
+    "source_id": "finn",
+    "citation_key": "finn2023seaiceSubgrid",
+    "url": "https://tc.copernicus.org/articles/17/2965/2023/",
+    "version": "The Cryosphere 17, 2965-2991 (2023); publisher HTML",
+    "validation_scope": "metadata_consistency_only",
+    "locator": "Section 5.1 and Conclusions; Sections 2-3 for the model and training; Section 5.3 and Discussion; Sections 2-3 for the model and training"
+  },
+  "gregory": {
+    "source_id": "gregory",
+    "citation_key": "gregory2024onlineice",
+    "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023GL106776",
+    "version": "GRL 51, e2023GL106776 (2024); publisher HTML",
+    "validation_scope": "metadata_consistency_only",
+    "locator": "Sections 2.1-2.3, 3.1 and 3.2.2"
+  },
+  "gregory_coupled": {
+    "source_id": "gregory_coupled",
+    "citation_key": "gregory2026coupled",
+    "url": "https://arxiv.org/html/2505.18328v1",
+    "version": "arXiv:2505.18328v1, 23 May 2025 (exact extraction source); publication: Science Advances 12(1), eady8957 (2026)",
+    "validation_scope": "metadata_consistency_only",
+    "locator": "Results: seasonal skill and out-of-sample behaviour; Discussion; Figure S3"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "constructed_periodic_passive_tracer_experiment",
+  "length_m": 100000.0,
+  "velocity_mps": 0.1,
+  "diffusivity_m2ps": 100.0,
+  "target_days": 5.0,
+  "receiver_centre_m": 62500.0,
+  "receiver_concentration": 10.0,
+  "amplitude_a": 0.04,
+  "amplitude_b": 0.05,
+  "phase_b_cosine": 0.2,
+  "bias_cancellation_fraction": 0.5,
+  "background_concentration": 1.0,
+  "reference_cosine_amplitude": 0.2,
+  "grid_sizes": [64, 128, 256, 512, 1024],
+  "report_grid_size": 256,
+  "dense_check_grid_size": 64,
+  "output_days": [0.0, 10.0, 0.05],
+  "selection": "Perturbations are constructed algebraically for the specified five-day functional. They are not fitted or selected from forecast data.",
+  "units": "Concentration and its errors are dimensionless; spatial inventories are concentration times metres per unit cross-sectional area."
+}

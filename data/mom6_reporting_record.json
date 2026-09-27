@@ -1,0 +1,100 @@
+{
+  "record_id": "ZHANG-ONLINE_source_review",
+  "claim": "Calibrated forcing improves time-mean SSH error in the reported MOM6 configuration; geometry and amplitude remain distinct limitations",
+  "scope": "Source-derived worked record; published-error arithmetic only, not an independent ocean-model reproduction",
+  "tested_tiers": [
+    3
+  ],
+  "source_derived": true,
+  "external_simulations_rerun": false,
+  "source_version": "arXiv:2303.00962v1, 2 March 2023; subsequently JAMES doi:10.1029/2023MS003697",
+  "source_url": "https://arxiv.org/html/2303.00962v1",
+  "source_locator": "Table 2 and Section 4.4",
+  "items": [
+    {
+      "id": "M01",
+      "status": "reported",
+      "detail": "The extracted source uses model velocities in a wind-driven idealized circulation experiment. This is not an issued operational forecast; issue-time availability is not applicable.",
+      "artifacts": [
+        "data/case_configurations.json"
+      ]
+    },
+    {
+      "id": "M02",
+      "status": "reported",
+      "detail": "Two-layer velocity and SSH; no thermodynamics. Coarse grids 1/4 to 1/16 degree; 1/32 reference. See the source sections for the layer definition and discrete setup.",
+      "artifacts": [
+        "data/case_configurations.json"
+      ]
+    },
+    {
+      "id": "M03",
+      "status": "reported",
+      "detail": "Fixed GZ21 conditional unresolved momentum forcing is evaluated through Forpy; online insertion does not imply online weight updates.",
+      "artifacts": [
+        "data/case_configurations.json"
+      ]
+    },
+    {
+      "id": "M04",
+      "status": "reported",
+      "detail": "Forcing enters the two-layer MOM6 momentum equations. Integration lasts 10 years, with statistics over the last 5 years. Local extraction is not a complete integrator specification.",
+      "artifacts": [
+        "data/case_configurations.json"
+      ]
+    },
+    {
+      "id": "M05",
+      "status": "unreported",
+      "detail": "The extracted SSH endpoint and kinetic-energy tuning do not establish mean/eddy work, scale-resolved closure work, or full discrete inventory residuals. Their absence from this record is not a finding of non-conservation.",
+      "artifacts": [
+        "data/case_configurations.json"
+      ]
+    },
+    {
+      "id": "M06",
+      "status": "reported",
+      "detail": "The comparison retains unparameterized, unscaled learned, and KE-tuned runs. Grid- and layer-dependent calibration is not counted as unchanged-parameter transfer.",
+      "artifacts": [
+        "data/closure_benchmark.csv",
+        "data/closure_geometry.csv"
+      ]
+    },
+    {
+      "id": "M07",
+      "status": "reported",
+      "detail": "Tier 3 numerical integration: time-mean SSH RMSE against a finer-grid model. Five tabulated grids give 8.2-26.8 percent reduction after KE tuning; this package recalculates percentages, not the original trajectories.",
+      "artifacts": [
+        "data/closure_benchmark.csv",
+        "data/case_configurations.json"
+      ]
+    },
+    {
+      "id": "M08",
+      "status": "unreported",
+      "detail": "Independent-initialization ensembles, uncertainty intervals, and an effective replication count for the tabulated differences are not established by the extracted evidence. Grid points and averaging samples are not independent replicated experiments.",
+      "artifacts": [
+        "data/case_configurations.json"
+      ]
+    },
+    {
+      "id": "M09",
+      "status": "reported",
+      "detail": "Resolution-specific tuning and an introduced obstacle are distinct contrasts. In the obstacle case unscaled RMSE changes from 0.1765 to 0.2503 m. A frozen-parameter success across all contrasts is not established.",
+      "artifacts": [
+        "data/closure_geometry.csv",
+        "data/case_configurations.json"
+      ]
+    },
+    {
+      "id": "M10",
+      "status": "unreported",
+      "detail": "No downstream acoustic evaluation of MOM6 fields is performed here. Source software access has not been independently audited, and this review release has no archive DOI yet. Local inputs and source locators are supplied.",
+      "artifacts": [
+        "data/case_configurations.json",
+        "data/closure_benchmark.csv",
+        "data/closure_geometry.csv"
+      ]
+    }
+  ]
+}

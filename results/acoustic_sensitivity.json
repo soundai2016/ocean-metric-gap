@@ -1,0 +1,76 @@
+{
+  "kind": "deterministic_idealised_operator_sensitivity",
+  "field_data": false,
+  "trained_model": false,
+  "spec": {
+    "purpose": "Illustrative counterexample and sensitivity checks, not an empirical model comparison",
+    "selection": "The 0.4/0.5 m/s pair was selected after exploratory calculations; it is not preregistered",
+    "amplitude_grid_mps": {
+      "start": 0.0,
+      "stop": 0.6,
+      "step": 0.025
+    },
+    "point_ranges_m": [
+      10000.0,
+      20000.0,
+      30000.0
+    ],
+    "contrast": {
+      "uniform_rms_mps": 0.4,
+      "localized_rms_mps": 0.5
+    },
+    "frequencies_hz": [
+      50.0,
+      100.0,
+      200.0
+    ],
+    "source_depths_m": [
+      25.0,
+      50.0,
+      100.0
+    ],
+    "report_basis_size": 128,
+    "check_basis_size": 192,
+    "range_step_m": 1.0,
+    "range_reference_step_m": 0.25,
+    "interpretation": "Range samples are deterministic evaluations, not independent replicates",
+    "local_metric_check": {
+      "derivative_step_mps": 0.0001,
+      "amplitudes_mps": [
+        0.001,
+        0.002,
+        0.005,
+        0.01
+      ]
+    }
+  },
+  "amplitude_rows": 150,
+  "local_metric_max_relative_error": 0.004567073979605495,
+  "operator_comparisons": 27,
+  "illustrative_field_task_reversals": 18,
+  "sensitivity_max_basis_abs_error": 3.921517741645175e-07,
+  "contrast": [
+    {
+      "perturbation": "uniform",
+      "rms_mps": 0.4,
+      "range_10km_mismatch": 0.7478210221454934,
+      "range_20km_mismatch": 0.5157846411383474,
+      "range_30km_mismatch": 0.8298482548431794,
+      "range_mean_mismatch": 0.5962130944353057,
+      "fine_range_mean_mismatch": 0.5962131223721356,
+      "basis_max_abs_error": 1.7076449698727458e-08,
+      "range_interpolation_max_abs_error": 0.0004994664967840068
+    },
+    {
+      "perturbation": "localized",
+      "rms_mps": 0.5,
+      "range_10km_mismatch": 0.5160585237218744,
+      "range_20km_mismatch": 0.7437081296453665,
+      "range_30km_mismatch": 0.49245916768173315,
+      "range_mean_mismatch": 0.5008510898520436,
+      "fine_range_mean_mismatch": 0.5008510838877197,
+      "basis_max_abs_error": 1.683473194180607e-08,
+      "range_interpolation_max_abs_error": 0.00038127172719648605
+    }
+  ]
+}

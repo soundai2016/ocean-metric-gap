@@ -1,0 +1,7 @@
+configuration,source_id,source_locator,baseline_rmse_m,learned_rmse_m,percent_reduction
+grid_1/4,zhang,Table 2,0.278,0.2034,26.834532374100725
+grid_1/5,zhang,Table 2,0.2093,0.1706,18.490205446727188
+grid_1/6,zhang,Table 2,0.1432,0.1253,12.5
+grid_1/7,zhang,Table 2,0.1167,0.1001,14.224507283633251
+grid_1/8,zhang,Table 2,0.0971,0.0891,8.238928939237907
+introduced_obstacle,zhang,Section 4.4,0.1765,0.2503,-41.81303116147311

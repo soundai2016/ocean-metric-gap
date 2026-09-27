@@ -1,0 +1,47 @@
+{
+  "kind": "idealised_range_independent_normal_modes",
+  "boundary_condition": "pressure_release_top_and_bottom",
+  "density": "constant",
+  "attenuation": "none",
+  "depth_m": 200.0,
+  "frequency_hz": 100.0,
+  "reference_speed_formula": "1490 + 12 exp(-z/35) + 0.025 z",
+  "source_depth_m": 50.0,
+  "receiver_min_depth_m": 20.0,
+  "receiver_max_depth_m": 180.0,
+  "receiver_spacing_m": 5.0,
+  "range_min_m": 500.0,
+  "range_max_m": 30000.0,
+  "rms_mps": 0.5,
+  "perturbations": [
+    {
+      "name": "uniform"
+    },
+    {
+      "name": "localized",
+      "centre_m": 45.0,
+      "width_m": 15.0
+    }
+  ],
+  "basis_sizes": [
+    32,
+    48,
+    64,
+    96,
+    128,
+    192
+  ],
+  "report_basis_size": 128,
+  "depth_grid_m": 0.25,
+  "method": "sine-Galerkin with Gaussian quadrature",
+  "report_range_step_m": 1.0,
+  "range_reference_step_m": 0.25,
+  "range_steps_m": [
+    50.0,
+    10.0,
+    5.0,
+    1.0,
+    0.5,
+    0.25
+  ]
+}

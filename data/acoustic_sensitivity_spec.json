@@ -1,0 +1,42 @@
+{
+  "purpose": "Illustrative counterexample and sensitivity checks, not an empirical model comparison",
+  "selection": "The 0.4/0.5 m/s pair was selected after exploratory calculations; it is not preregistered",
+  "amplitude_grid_mps": {
+    "start": 0.0,
+    "stop": 0.6,
+    "step": 0.025
+  },
+  "point_ranges_m": [
+    10000.0,
+    20000.0,
+    30000.0
+  ],
+  "contrast": {
+    "uniform_rms_mps": 0.4,
+    "localized_rms_mps": 0.5
+  },
+  "frequencies_hz": [
+    50.0,
+    100.0,
+    200.0
+  ],
+  "source_depths_m": [
+    25.0,
+    50.0,
+    100.0
+  ],
+  "report_basis_size": 128,
+  "check_basis_size": 192,
+  "range_step_m": 1.0,
+  "range_reference_step_m": 0.25,
+  "interpretation": "Range samples are deterministic evaluations, not independent replicates",
+  "local_metric_check": {
+    "derivative_step_mps": 0.0001,
+    "amplitudes_mps": [
+      0.001,
+      0.002,
+      0.005,
+      0.01
+    ]
+  }
+}

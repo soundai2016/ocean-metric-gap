@@ -1,0 +1,47 @@
+{
+  "valid": true,
+  "records": [
+    {
+      "record_id": "prescribed_acoustic_operator_v1",
+      "valid": true,
+      "status_counts": {
+        "reported": 7,
+        "unreported": 0,
+        "not_applicable": 3
+      },
+      "checked_artifacts": [
+        "data/acoustic_sensitivity_spec.json",
+        "data/acoustic_spec.json",
+        "results/acoustic_contrast.csv",
+        "results/acoustic_operator_sensitivity.csv",
+        "results/acoustic_sensitivity.json",
+        "results/physical_diagnostics.json",
+        "scripts/acoustic_example.py",
+        "scripts/acoustic_sensitivity.py"
+      ],
+      "scope": "record_completeness_and_local_paths_only",
+      "scientific_quality_score": null,
+      "independent_source_verification": false
+    },
+    {
+      "record_id": "ZHANG-ONLINE_source_review",
+      "valid": true,
+      "status_counts": {
+        "reported": 7,
+        "unreported": 3,
+        "not_applicable": 0
+      },
+      "checked_artifacts": [
+        "data/case_configurations.json",
+        "data/closure_benchmark.csv",
+        "data/closure_geometry.csv"
+      ],
+      "scope": "record_completeness_and_local_paths_only",
+      "scientific_quality_score": null,
+      "independent_source_verification": false
+    }
+  ],
+  "scope": "record_completeness_and_local_paths_only",
+  "scientific_quality_score": null,
+  "independent_source_verification": false
+}

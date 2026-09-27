@@ -1,0 +1,1431 @@
+[
+  {
+    "configuration_id": "OCNET-LC",
+    "source_id": "oceannet",
+    "citation_key": "chattopadhyay2024oceannet",
+    "configuration_label": "OceanNet / Loop Current",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "regional_forecasting"
+    ],
+    "task": "Regional sea-surface-height prediction",
+    "evaluation_setting": "D",
+    "variables": "SSH",
+    "grid": "4 km regional grid",
+    "horizon": "5-day steps; tests to 120 days",
+    "input_support": "Gridded ROMS/EnKF SSH; 1993-2018 training data.",
+    "verification": "Regional reanalysis; ROMS and persistence comparators.",
+    "physics_mechanism": "High-wavenumber spectral penalty in training; predictor-evaluate-corrector rollout. A generic FNO alone is not counted as physical insertion.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C1"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": []
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "Gridded ROMS/EnKF SSH; 1993-2018 training data."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "High-wavenumber spectral penalty in training; predictor-evaluate-corrector rollout. A generic FNO alone is not counted as physical insertion."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Regional sea-surface-height prediction; 5-day steps; tests to 120 days"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "unassessed",
+        "detail": "No N facet is assigned from this targeted check; this is not a negative finding."
+      }
+    },
+    "source_locator": "Results: Loop Current forecasts and Gulf Stream forecasts; Methods: OceanNet and training data",
+    "source_url": "https://www.nature.com/articles/s41598-024-72145-0",
+    "source_version": "Scientific Reports 14, article 21181 (2024); publisher HTML",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "For the Sverdrup and Thor cases, Loop Current contour errors improve relative to ROMS while SSH RMSE and correlation are broadly comparable between the two forecast systems.",
+    "next_test": "Test temperature/salinity and subsurface structure before using the predictor as an acoustic-medium model.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "ROMS and persistence; SSH and Loop Current contour diagnostics",
+    "result_locator": "Results: Loop Current forecasts; Figures 2-4",
+    "review_interpretation": "Feature displacement and field error answer different circulation questions.",
+    "extraction_checked_on": "2026-09-15"
+  },
+  {
+    "configuration_id": "OCNET-GS",
+    "source_id": "oceannet",
+    "citation_key": "chattopadhyay2024oceannet",
+    "configuration_label": "OceanNet / Gulf Stream",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "regional_forecasting"
+    ],
+    "task": "Regional sea-surface-height prediction",
+    "evaluation_setting": "D",
+    "variables": "SSH",
+    "grid": "4 km regional grid",
+    "horizon": "4-day steps; tests to 120 days",
+    "input_support": "Gridded ROMS/EnKF SSH; 1993-2018 training data.",
+    "verification": "Regional reanalysis; ROMS and persistence comparators.",
+    "physics_mechanism": "High-wavenumber spectral penalty in training; predictor-evaluate-corrector rollout. A generic FNO alone is not counted as physical insertion.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C1"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": []
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "Gridded ROMS/EnKF SSH; 1993-2018 training data."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "High-wavenumber spectral penalty in training; predictor-evaluate-corrector rollout. A generic FNO alone is not counted as physical insertion."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Regional sea-surface-height prediction; 4-day steps; tests to 120 days"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "unassessed",
+        "detail": "No N facet is assigned from this targeted check; this is not a negative finding."
+      }
+    },
+    "source_locator": "Results: Loop Current forecasts and Gulf Stream forecasts; Methods: OceanNet and training data",
+    "source_url": "https://www.nature.com/articles/s41598-024-72145-0",
+    "source_version": "Scientific Reports 14, article 21181 (2024); publisher HTML",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "The Gulf Stream tests report improvements in SSH and feature-location metrics over the stated baselines; boundary errors remain and the forecasts become more diffuse at long lead.",
+    "next_test": "Test temperature/salinity and subsurface structure before using the predictor as an acoustic-medium model.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "ROMS and persistence; regional SSH and Gulf Stream path",
+    "result_locator": "Results: Gulf Stream forecasts",
+    "review_interpretation": "Regional feature skill should be interpreted with the lateral-boundary treatment and lead time.",
+    "extraction_checked_on": "2026-09-15"
+  },
+  {
+    "configuration_id": "XIHE-OBS",
+    "source_id": "xihe",
+    "citation_key": "wang2024xihe",
+    "configuration_label": "XiHe / observational verification",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "global_forecasting"
+    ],
+    "task": "Global initialized ocean prediction",
+    "evaluation_setting": "D",
+    "variables": "T, S, u, v at 23 depths to 643.57 m; SSH and surface temperature",
+    "grid": "1/12 degree",
+    "horizon": "Daily states; lead-time-stratified forecasts",
+    "input_support": "GLORYS12 fields with ERA5 winds and OSTIA surface temperature on a common grid.",
+    "verification": "IV-TT Class 4, in-situ profiles and buoys, satellite products; 2019-2020.",
+    "physics_mechanism": "Ocean-land mask restricts attention to wet regions; not a conservation law.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C2"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": []
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "GLORYS12 fields with ERA5 winds and OSTIA surface temperature on a common grid."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Ocean-land mask restricts attention to wet regions; not a conservation law."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Global initialized ocean prediction; Daily states; lead-time-stratified forecasts"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "unassessed",
+        "detail": "No N facet is assigned from this targeted check; this is not a negative finding."
+      }
+    },
+    "source_locator": "Sections III.A-B, IV.A and IV.E-F, V.A-D",
+    "source_url": "https://arxiv.org/html/2402.02995v4",
+    "source_version": "arXiv:2402.02995v4, 22 October 2024",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "The 2019-2020 comparisons report lower errors for the evaluated ocean variables against profiles, buoy and satellite observations than the listed numerical forecasts.",
+    "next_test": "Audit which verifying observations entered initialization and the availability of forcing for each lead.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "Operational numerical systems in the reported IV-TT Class 4 comparisons",
+    "result_locator": "Section V.A-D: in-situ temperature/salinity, SST, SLA and currents",
+    "review_interpretation": "Native-observation verification adds evidence beyond reproduction of a gridded analysis; assimilation lineage still matters.",
+    "extraction_checked_on": "2026-09-15"
+  },
+  {
+    "configuration_id": "SEACAST-15D",
+    "source_id": "seacast",
+    "citation_key": "holmberg2025seacast",
+    "configuration_label": "SeaCast / 15-day forecasts",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "regional_forecasting"
+    ],
+    "task": "Mediterranean initialized ocean prediction",
+    "evaluation_setting": "D",
+    "variables": "T, S, u, v at 18 depths to 192 m; SSH",
+    "grid": "1/24 degree",
+    "horizon": "Daily steps; 15 days",
+    "input_support": "Reanalysis pretraining 1987-2021; analysis fine-tuning 2022-2023; forecast atmospheric inputs and MedFS lateral boundaries.",
+    "verification": "182 daily initializations, 3 July-31 December 2024; verification through 14 January 2025; MedFS analyses and L3 satellite SST/along-track SLA.",
+    "physics_mechanism": "Coastline-aware graph and depth-wise wet mask; prescribed boundaries are not two-way learned-solver coupling.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C2"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": [
+        "N2"
+      ]
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "Reanalysis pretraining 1987-2021; analysis fine-tuning 2022-2023; forecast atmospheric inputs and MedFS lateral boundaries."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Coastline-aware graph and depth-wise wet mask; prescribed boundaries are not two-way learned-solver coupling."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Mediterranean initialized ocean prediction; Daily steps; 15 days"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "supported",
+        "detail": "Reference: ENS forecast forcing; contrast: AIFS forcing for the same ocean predictor and variables. This is a named forcing comparison, not proof of arbitrary OOD robustness."
+      }
+    },
+    "source_locator": "Results: Comparing SeaCast to the operational MedFS, Effect of training period; Methods: Dataset/Ocean state",
+    "source_url": "https://www.nature.com/articles/s41598-025-31177-w",
+    "source_version": "Scientific Reports 15, article 45051 (2025); publisher HTML",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "Most analysed-field errors decrease, with weaker gains near the deepest predicted level; the relative ranking of training variants changes for along-track SLA.",
+    "next_test": "Compare interior skill under matched independent boundary forecasts; retain separate observation-space verification.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "Reference: ENS forecast forcing; contrast: AIFS forcing for the same ocean predictor and variables. This is a named forcing comparison, not proof of arbitrary OOD robustness.",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "MedFS; alternative forcing and training-period variants",
+    "result_locator": "Results: Comparing SeaCast to the operational MedFS and Effect of training period; Methods: Dataset/Ocean state (18 levels and test dates)",
+    "review_interpretation": "The supplied MedFS boundaries and the observation support are part of the useful forecast system.",
+    "extraction_checked_on": "2026-09-15",
+    "source_checked_at": "2026-09-15"
+  },
+  {
+    "configuration_id": "NJORD-GLOBAL",
+    "source_id": "njord",
+    "citation_key": "holmberg2026njord",
+    "configuration_label": "Njord / global ensemble",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "ensemble_forecasting"
+    ],
+    "task": "Probabilistic global initialized forecasting",
+    "evaluation_setting": "D",
+    "variables": "T, S, u, v at six representative depths; SSH; sea-ice concentration",
+    "grid": "Global 0.25 degree",
+    "horizon": "10-day rollouts; 20 members",
+    "input_support": "Gridded reanalysis training; GLO12 initialization and issued IFS atmospheric forecasts for evaluation.",
+    "verification": "2024 weekly issues; analysis-space and OceanBench Class 4 observation comparisons.",
+    "physics_mechanism": "Land-crossing graph edges are removed; sea-ice output is projected to its admissible interval.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C1",
+        "C2"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": [
+        "N1"
+      ]
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "Gridded reanalysis training; GLO12 initialization and issued IFS atmospheric forecasts for evaluation."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Land-crossing graph edges are removed; sea-ice output is projected to its admissible interval."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "10-day rollouts; 20 members"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "Passive forecast or numerical-model evaluation."
+      },
+      "N": {
+        "status": "supported",
+        "detail": "CRPS and spread-skill diagnostics; 20-member global ensemble."
+      }
+    },
+    "source_locator": "Sections 5.1-5.2; Appendix E.4, E.6 and E.9",
+    "source_url": "https://arxiv.org/html/2605.15470v2",
+    "source_version": "arXiv:2605.15470v2, 28 May 2026; preprint",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "Reports strong upper-ocean observation-space accuracy, particularly temperature; ensemble spread is somewhat too small at short lead and approaches error magnitude later.",
+    "next_test": "Check reliability and joint temperature-salinity errors on held-out regions before acoustic propagation.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "",
+    "probability_assessment": "CRPS and spread-skill diagnostics; 20-member global ensemble.",
+    "calibration_quality": "lead_dependent_underdispersion",
+    "comparator": "Deterministic baselines and the reported global OceanBench systems",
+    "result_locator": "Section 5.1, Global results and Observation results; Appendix E.4 and E.6",
+    "review_interpretation": "Mean skill and the evolution of ensemble spread supply complementary evidence.",
+    "extraction_checked_on": "2026-09-15",
+    "source_checked_at": "2026-09-15"
+  },
+  {
+    "configuration_id": "NJORD-BALTIC",
+    "source_id": "njord",
+    "citation_key": "holmberg2026njord",
+    "configuration_label": "Njord / Baltic ensemble",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "ensemble_forecasting"
+    ],
+    "task": "Probabilistic regional initialized forecasting",
+    "evaluation_setting": "D",
+    "variables": "T, S, u, v at five depths; SSH; sea-ice concentration",
+    "grid": "Baltic Sea, 2 km",
+    "horizon": "10-day rollouts; 5 members",
+    "input_support": "Regional gridded fields; atmospheric forecasts and separate encoding of externally supplied lateral boundaries.",
+    "verification": "Regional analysis verification; reanalysis-only versus analysis-fine-tuned training.",
+    "physics_mechanism": "Coastline-aware graph, masked wet domain and constrained sea-ice output.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C1",
+        "C2"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": [
+        "N1",
+        "N2"
+      ]
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "Regional gridded fields; atmospheric forecasts and separate encoding of externally supplied lateral boundaries."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Coastline-aware graph, masked wet domain and constrained sea-ice output."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "10-day rollouts; 5 members"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "Passive forecast or numerical-model evaluation."
+      },
+      "N": {
+        "status": "supported",
+        "detail": "Regional CRPS and spread-skill diagnostics for five-member forecasts. Reference: reanalysis-only training; contrast: fine-tuning on operational analyses."
+      }
+    },
+    "source_locator": "Sections 5.1-5.2; Appendix E.4, E.6 and E.9",
+    "source_url": "https://arxiv.org/html/2605.15470v2",
+    "source_version": "arXiv:2605.15470v2, 28 May 2026; preprint",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "Fine-tuning improves most regional mean-error and spread-skill diagnostics relative to reanalysis-only training.",
+    "next_test": "Evaluate boundary sensitivity and probabilistic skill against observations on their native support.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "Reference: reanalysis-only training; contrast: fine-tuning on operational analyses.",
+    "probability_assessment": "Regional CRPS and spread-skill diagnostics for five-member forecasts.",
+    "calibration_quality": "conditional_reliability_not_established",
+    "comparator": "Deterministic regional baseline and Njord without analysis fine-tuning",
+    "result_locator": "Section 5.2, Regional results; Appendix E.9",
+    "review_interpretation": "A target-product change affects the ensemble as well as its mean.",
+    "extraction_checked_on": "2026-09-15",
+    "source_checked_at": "2026-09-15"
+  },
+  {
+    "configuration_id": "FUXIONS-ANNUAL",
+    "source_id": "fuxions",
+    "citation_key": "huang2026fuxions",
+    "configuration_label": "FuXi-ONS / seasonal-to-annual ensemble",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "ensemble_forecasting"
+    ],
+    "task": "Global ensemble prediction",
+    "evaluation_setting": "D",
+    "variables": "Upper-ocean temperature, salinity, currents and SSH",
+    "grid": "Global 1 degree",
+    "horizon": "5-day steps to 365 days; 24 members",
+    "input_support": "Gridded ocean initialization and an encoding of the initialization atmosphere; future atmospheric analyses are training targets, not rollout inputs.",
+    "verification": "GLORYS12 verification; matched initialization sets for the reported baselines.",
+    "physics_mechanism": "State-dependent spatially correlated perturbations; their zero-frequency noise component is removed. No exact ocean budget constraint is claimed.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C1"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": [
+        "N1",
+        "N2"
+      ]
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "Gridded ocean initialization and an encoding of the initialization atmosphere; future atmospheric analyses are training targets, not rollout inputs."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "State-dependent spatially correlated perturbations; their zero-frequency noise component is removed. No exact ocean budget constraint is claimed."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "5-day steps to 365 days; 24 members"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "Passive forecast or numerical-model evaluation."
+      },
+      "N": {
+        "status": "supported",
+        "detail": "CRPS, RMSE and ensemble uncertainty diagnostics. Reference: fixed externally imposed perturbations; contrast: learned flow-dependent perturbations and atmospheric conditioning."
+      }
+    },
+    "source_locator": "Sections 2.1-2.3 and 4.3-4.6",
+    "source_url": "https://arxiv.org/html/2603.19591v1",
+    "source_version": "arXiv:2603.19591v1, 20 March 2026; preprint",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "Learned structured perturbations improve ensemble-mean and CRPS performance over the reported deterministic and prescribed-noise controls.",
+    "next_test": "Test joint profile reliability and decision-specific acoustic probabilities, retaining the initialization-only atmospheric information.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "Reference: fixed externally imposed perturbations; contrast: learned flow-dependent perturbations and atmospheric conditioning.",
+    "probability_assessment": "CRPS, RMSE and ensemble uncertainty diagnostics.",
+    "calibration_quality": "not_assessed",
+    "comparator": "Deterministic model, externally prescribed-noise ensembles and the matched NMME subset",
+    "result_locator": "Sections 2.1-2.3 and 4.3-4.6",
+    "review_interpretation": "The atmosphere and ensemble-generation mechanisms differ from short-range boundary-forced systems.",
+    "extraction_checked_on": "2026-09-15",
+    "source_checked_at": "2026-09-15"
+  },
+  {
+    "configuration_id": "SAM-FULL-HIST",
+    "source_id": "samudra",
+    "citation_key": "dheeshjith2025samudra",
+    "configuration_label": "Samudra / full / hist",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "climate_emulation"
+    ],
+    "task": "Forced global ocean-model emulation",
+    "evaluation_setting": "S",
+    "variables": "T, S, u, v, SSH; 19 depth levels to 6000 m",
+    "grid": "1 degree; filtered OM4 output",
+    "horizon": "8-year 2014-2022 rollout; 5-day means",
+    "input_support": "OM4 states and prescribed stresses/heat flux; 1975-2012 training, 2012-2014 validation.",
+    "verification": "Held-out OM4 historical fields, 2014-2022.",
+    "physics_mechanism": "Longitude-periodic padding encodes geographical topology; no exact heat or salt conservation is imposed.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C2"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": []
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "OM4 states and prescribed stresses/heat flux; 1975-2012 training, 2012-2014 validation."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Longitude-periodic padding encodes geographical topology; no exact heat or salt conservation is imposed."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Forced global ocean-model emulation; 8-year 2014-2022 rollout; 5-day means"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "unassessed",
+        "detail": "No N facet is assigned from this targeted check; this is not a negative finding."
+      }
+    },
+    "source_locator": "Sections 2.1-2.5 and 3.1-3.2; Figure 2 and supporting Figure S9",
+    "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL114318",
+    "source_version": "Geophysical Research Letters 52(10), e2024GL114318 (2025); version of record",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "The full-state rollout represents broad variability but underestimates potential-temperature trends; across the reported historical configurations the shortfall is 20-50% at most depths.",
+    "next_test": "Evaluate forced heat-content trends and budget residuals independently of bounded rollout.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "Filtered OM4 historical trajectory; thermodynamic-only variant",
+    "result_locator": "Section 3.1: historical integration; Figure 2 and Figure S9",
+    "review_interpretation": "A stable trajectory can attenuate the weak climate signal that an emulator is intended to represent.",
+    "extraction_checked_on": "2026-09-15",
+    "source_checked_at": "2026-09-15"
+  },
+  {
+    "configuration_id": "SAM-THERMO-HIST",
+    "source_id": "samudra",
+    "citation_key": "dheeshjith2025samudra",
+    "configuration_label": "Samudra / thermo / hist",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "climate_emulation"
+    ],
+    "task": "Forced global ocean-model emulation",
+    "evaluation_setting": "S",
+    "variables": "T, S, SSH; 19 depth levels to 6000 m",
+    "grid": "1 degree; filtered OM4 output",
+    "horizon": "8-year 2014-2022 rollout; 5-day means",
+    "input_support": "OM4 states and prescribed stresses/heat flux; 1975-2012 training, 2012-2014 validation.",
+    "verification": "Held-out OM4 historical fields, 2014-2022.",
+    "physics_mechanism": "Longitude-periodic padding encodes geographical topology; no exact heat or salt conservation is imposed.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C2"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": []
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "OM4 states and prescribed stresses/heat flux; 1975-2012 training, 2012-2014 validation."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Longitude-periodic padding encodes geographical topology; no exact heat or salt conservation is imposed."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Forced global ocean-model emulation; 8-year 2014-2022 rollout; 5-day means"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "unassessed",
+        "detail": "No N facet is assigned from this targeted check; this is not a negative finding."
+      }
+    },
+    "source_locator": "Sections 2.1-2.5 and 3.1-3.2; Figure 2 and supporting Figure S9",
+    "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL114318",
+    "source_version": "Geophysical Research Letters 52(10), e2024GL114318 (2025); version of record",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "The thermodynamic-only variant tracks global heat-content changes more closely than the full-state variant in the historical test, while the reported trends remain underestimated.",
+    "next_test": "Evaluate forced heat-content trends and budget residuals independently of bounded rollout.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "Full thermodynamic-dynamic variant; filtered OM4",
+    "result_locator": "Section 3.1; Figure 2 and Figure S9",
+    "review_interpretation": "For the reported heat-content endpoint, the thermodynamic-only state selection performs better than the full prognostic state in this historical test.",
+    "extraction_checked_on": "2026-09-15",
+    "source_checked_at": "2026-09-15"
+  },
+  {
+    "configuration_id": "SAM-FULL-CONTROL",
+    "source_id": "samudra",
+    "citation_key": "dheeshjith2025samudra",
+    "configuration_label": "Samudra / full / control",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "climate_emulation"
+    ],
+    "task": "Forced global ocean-model emulation",
+    "evaluation_setting": "S",
+    "variables": "T, S, u, v, SSH; 19 depth levels to 6000 m",
+    "grid": "1 degree; filtered OM4 output",
+    "horizon": "100- and 400-year repeated-forcing integrations; 5-day means",
+    "input_support": "OM4 states and prescribed stresses/heat flux; 1975-2012 training, 2012-2014 validation.",
+    "verification": "Long-run statistics under repeated 1990-2000 forcing; comparison between state-variable variants.",
+    "physics_mechanism": "Longitude-periodic padding encodes geographical topology; no exact heat or salt conservation is imposed.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C2"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": [
+        "N2"
+      ]
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "OM4 states and prescribed stresses/heat flux; 1975-2012 training, 2012-2014 validation."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Longitude-periodic padding encodes geographical topology; no exact heat or salt conservation is imposed."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Forced global ocean-model emulation; 100- and 400-year repeated-forcing integrations; 5-day means"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "supported",
+        "detail": "Reference: historical atmospheric sequence; contrast: repeated 1990-2000 forcing cycle selected for near-zero mean heat flux."
+      }
+    },
+    "source_locator": "Sections 2.1-2.5 and 3.1-3.2; Figure 2 and supporting Figure S9",
+    "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL114318",
+    "source_version": "Geophysical Research Letters 52(10), e2024GL114318 (2025); version of record",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "The full-state model remains bounded in 100- and 400-year controls; its Nino variability is comparatively strong and tied to the repeated forcing cycle.",
+    "next_test": "Evaluate forced heat-content trends and budget residuals independently of bounded rollout.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "Reference: historical atmospheric sequence; contrast: repeated 1990-2000 forcing cycle selected for near-zero mean heat flux.",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "Historical integration; thermodynamic-only repeated-forcing run",
+    "result_locator": "Section 3.2; Figures 3 and S15",
+    "review_interpretation": "Boundedness and the frequency structure of variability should be read together.",
+    "extraction_checked_on": "2026-09-15",
+    "source_checked_at": "2026-09-15"
+  },
+  {
+    "configuration_id": "SAM-THERMO-CONTROL",
+    "source_id": "samudra",
+    "citation_key": "dheeshjith2025samudra",
+    "configuration_label": "Samudra / thermo / control",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "climate_emulation"
+    ],
+    "task": "Forced global ocean-model emulation",
+    "evaluation_setting": "S",
+    "variables": "T, S, SSH; 19 depth levels to 6000 m",
+    "grid": "1 degree; filtered OM4 output",
+    "horizon": "100- and 400-year repeated-forcing integrations; 5-day means",
+    "input_support": "OM4 states and prescribed stresses/heat flux; 1975-2012 training, 2012-2014 validation.",
+    "verification": "Long-run statistics under repeated 1990-2000 forcing; comparison between state-variable variants.",
+    "physics_mechanism": "Longitude-periodic padding encodes geographical topology; no exact heat or salt conservation is imposed.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C2"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": [
+        "N2"
+      ]
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "OM4 states and prescribed stresses/heat flux; 1975-2012 training, 2012-2014 validation."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Longitude-periodic padding encodes geographical topology; no exact heat or salt conservation is imposed."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Forced global ocean-model emulation; 100- and 400-year repeated-forcing integrations; 5-day means"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "supported",
+        "detail": "Reference: historical atmospheric sequence; contrast: repeated 1990-2000 forcing cycle selected for near-zero mean heat flux."
+      }
+    },
+    "source_locator": "Sections 2.1-2.5 and 3.1-3.2; Figure 2 and supporting Figure S9",
+    "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL114318",
+    "source_version": "Geophysical Research Letters 52(10), e2024GL114318 (2025); version of record",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "The thermodynamic-only model remains bounded in 100- and 400-year controls and exhibits more aperiodic interannual-to-longer variability than the full-state model.",
+    "next_test": "Evaluate forced heat-content trends and budget residuals independently of bounded rollout.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "Reference: historical atmospheric sequence; contrast: repeated 1990-2000 forcing cycle selected for near-zero mean heat flux.",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "Full-state repeated-forcing run",
+    "result_locator": "Section 3.2; Figures 3 and S15",
+    "review_interpretation": "The response statistics differ even when both variants pass a bounded-integration test.",
+    "extraction_checked_on": "2026-09-15",
+    "source_checked_at": "2026-09-15"
+  },
+  {
+    "configuration_id": "SAM2-MULTI",
+    "source_id": "samudra2",
+    "citation_key": "yuan2026samudra2",
+    "configuration_label": "Samudra 2 / historical multiresolution emulation",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "physical_modelling"
+    ],
+    "task": "Forced global ocean-model emulation",
+    "evaluation_setting": "S",
+    "variables": "T, S, u, v and SSH; full-depth model fields",
+    "grid": "Separate training at 1, 0.5 and 0.25 degree",
+    "horizon": "Approximately eight-year held-out rollouts",
+    "input_support": "OM4-derived gridded states and prescribed atmospheric forcing.",
+    "verification": "Held-out parent-model trajectories; depth-stratified temporal, variance and spectral diagnostics.",
+    "physics_mechanism": "Periodic longitude representation; wider network and dynamically balanced loss alter the allocation of capacity and gradient signal.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C2"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": [
+        "N2"
+      ]
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "OM4-derived gridded states and prescribed atmospheric forcing."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Periodic longitude representation; wider network and dynamically balanced loss alter the allocation of capacity and gradient signal."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Approximately eight-year held-out rollouts"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "Passive forecast or numerical-model evaluation."
+      },
+      "N": {
+        "status": "supported",
+        "detail": "Reference: original width/loss; contrast: width and dynamic-loss ablations plus separately trained grid resolutions."
+      }
+    },
+    "source_locator": "Sections 3.5 and 4.1-4.5; Figure 4b (detrended global-mean temperature); Appendix A.4",
+    "source_url": "https://arxiv.org/html/2606.02610v2",
+    "source_version": "arXiv:2606.02610v2, 21 June 2026; preprint",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "At 1 degree, detrended global-mean upper-ocean temperature R-squared rises from 0.56 to 0.87; deep-ocean R-squared improves but remains negative.",
+    "next_test": "Assess weak forced responses and budget consistency beyond the retained historical interval.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "Reference: original width/loss; contrast: width and dynamic-loss ablations plus separately trained grid resolutions.",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "Original Samudra; width-only and loss-only ablations; separately trained resolution variants",
+    "result_locator": "Section 4.1 and Figure 4b: detrended global-mean temperature; Sections 3.5 and 4.3: separate resolution training; Section 4.5: ablations",
+    "review_interpretation": "The gain concerns depth-dependent signal recovery, with separate training at each resolution.",
+    "extraction_checked_on": "2026-09-15",
+    "source_checked_at": "2026-09-15"
+  },
+  {
+    "configuration_id": "GZ-OFFLINE",
+    "source_id": "gz",
+    "citation_key": "guillaumin2021stochastic",
+    "configuration_label": "Guillaumin--Zanna / offline",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "parameterization"
+    ],
+    "task": "Offline subgrid momentum-forcing inference",
+    "evaluation_setting": "D",
+    "variables": "Surface velocity inputs; forcing mean and standard deviation",
+    "grid": "Coarse-grained CM2.6 fields",
+    "horizon": "Instantaneous closure estimation",
+    "input_support": "Resolved surface velocities from numerical simulations.",
+    "verification": "Filtered high-resolution forcing, regional and warming-condition checks.",
+    "physics_mechanism": "Conditional Gaussian CNN; neither physical variable names nor Gaussian likelihood alone establishes C1-C3.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C0"
+      ],
+      "E": "E0",
+      "A": "A0",
+      "N": [
+        "N1",
+        "N2"
+      ]
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "Resolved surface velocities from numerical simulations."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Conditional Gaussian CNN; neither physical variable names nor Gaussian likelihood alone establishes C1-C3."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Offline subgrid momentum-forcing inference; Instantaneous closure estimation"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "supported",
+        "detail": "Reference: training ocean regions and climate simulation; contrast: other regions and a warming experiment as reported in Section 3."
+      }
+    },
+    "source_locator": "Sections 2-3 (offline forcing); Section 4 (online shallow-water tests)",
+    "source_url": "https://repository.library.noaa.gov/view/noaa/32958/noaa_32958_DS1.pdf",
+    "source_version": "JAMES 13, e2021MS002534 (2021); NOAA archived published PDF",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "Predicted conditional means and variances track spatial forcing variability outside the training regions; standardized residuals retain departures from the assumed Gaussian form.",
+    "next_test": "Test coupled budgets and kinetic-energy statistics in the receiving dynamical model.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "Reference: training ocean regions and climate simulation; contrast: other regions and a warming experiment as reported in Section 3.",
+    "probability_assessment": "Gaussian conditional distributions and standardized-residual diagnostics; calibration quality is not reduced to a pass/fail label.",
+    "calibration_quality": "not_assessed",
+    "comparator": "Filtered forcing from high-resolution CM2.6; held-out regions and warming experiment",
+    "result_locator": "Sections 3.1-3.3; standardized-residual analysis",
+    "review_interpretation": "Learning conditional variance improves the description of unresolved forcing but leaves higher-order structure open.",
+    "extraction_checked_on": "2026-09-15"
+  },
+  {
+    "configuration_id": "GZ-ONLINE",
+    "source_id": "gz",
+    "citation_key": "guillaumin2021stochastic",
+    "configuration_label": "Guillaumin--Zanna / shallow water",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "parameterization"
+    ],
+    "task": "Online momentum-forcing parameterization",
+    "evaluation_setting": "S",
+    "variables": "Shallow-water velocity and layer state",
+    "grid": "Idealised shallow-water solver",
+    "horizon": "Coupled integrations in Section 4",
+    "input_support": "Resolved numerical-model velocities drive the fixed learned forcing.",
+    "verification": "High-resolution reference and unparameterized coarse model.",
+    "physics_mechanism": "Learned momentum forcing is inserted during time integration.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C3"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": []
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "Resolved numerical-model velocities drive the fixed learned forcing."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Learned momentum forcing is inserted during time integration."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Online momentum-forcing parameterization; Coupled integrations in Section 4"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "unassessed",
+        "detail": "No N facet is assigned from this targeted check; this is not a negative finding."
+      }
+    },
+    "source_locator": "Sections 2-3 (offline forcing); Section 4 (online shallow-water tests)",
+    "source_url": "https://repository.library.noaa.gov/view/noaa/32958/noaa_32958_DS1.pdf",
+    "source_version": "JAMES 13, e2021MS002534 (2021); NOAA archived published PDF",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "The coupled shallow-water runs remain stable and improve kinetic-energy mean and variability and SSH variability; changes in mean velocity are small.",
+    "next_test": "Test vertical structure, coastlines and resolution before extending to a baroclinic circulation model.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "Unparameterized coarse model and high-resolution shallow-water reference",
+    "result_locator": "Section 4; Figures 8-9",
+    "review_interpretation": "Success is diagnostic-specific: recovering variability is a clearer result here than recovering the mean circulation.",
+    "extraction_checked_on": "2026-09-15"
+  },
+  {
+    "configuration_id": "ZHANG-ONLINE",
+    "source_id": "zhang",
+    "citation_key": "zhang2023implementation",
+    "configuration_label": "Zhang et al. / MOM6",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "parameterization"
+    ],
+    "task": "Online mesoscale momentum-forcing parameterization",
+    "evaluation_setting": "S",
+    "variables": "Two-layer velocity and SSH; no thermodynamics",
+    "grid": "Coarse grids 1/4 to 1/16 degree; 1/32 reference",
+    "horizon": "10 years, statistics over the final 5 years",
+    "input_support": "The GZ21 network is called from MOM6 through Forpy, using model velocities.",
+    "verification": "Fine-grid model and unparameterized coarse runs; layer- and metric-dependent tuning.",
+    "physics_mechanism": "Fixed learned forcing is evaluated inside the MOM6 integration; this is online inference, not online learning.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C3"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": [
+        "N2"
+      ]
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "The GZ21 network is called from MOM6 through Forpy, using model velocities."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Fixed learned forcing is evaluated inside the MOM6 integration; this is online inference, not online learning."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Online mesoscale momentum-forcing parameterization; 10 years, statistics over the final 5 years"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "supported",
+        "detail": "Reference: original surface-trained closure; contrast: two-layer interior application, varied resolutions and introduced wall-bounded geometry."
+      }
+    },
+    "source_locator": "Sections 2.3, 3.1-3.4, 4.1-4.5; Table 2",
+    "source_url": "https://arxiv.org/html/2303.00962v1",
+    "source_version": "arXiv:2303.00962v1, 2 March 2023; subsequently JAMES doi:10.1029/2023MS003697",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "KE-tuned forcing reduces time-mean SSH RMSE by 8.2-26.8% over the five tabulated grids. In the introduced-obstacle case, unscaled forcing increases RMSE from 0.1765 to 0.2503 m.",
+    "next_test": "Evaluate withheld resolutions and geometry using fixed, separately selected tuning coefficients.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "Reference: original surface-trained closure; contrast: two-layer interior application, varied resolutions and introduced wall-bounded geometry.",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "Unparameterized two-layer MOM6; unscaled and KE-tuned learned forcing",
+    "result_locator": "Table 2 and Section 4.4",
+    "review_interpretation": "Amplitude calibration and boundary geometry expose distinct limitations of transferring the closure.",
+    "extraction_checked_on": "2026-09-15"
+  },
+  {
+    "configuration_id": "PEREZHOGIN-SCALE",
+    "source_id": "perezhogin2025",
+    "citation_key": "perezhogin2025generalizable",
+    "configuration_label": "Dimensional scaling / cross-resolution closure",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "physical_modelling"
+    ],
+    "task": "Offline subgrid-forcing prediction under a change of horizontal resolution",
+    "evaluation_setting": "D",
+    "variables": "Velocity-gradient features and subfilter momentum fluxes",
+    "grid": "CM2.6-derived grids; training nominal 0.9 degree at 5 m",
+    "horizon": "Instantaneous forcing evaluation on held-out snapshots",
+    "input_support": "Locally scaled resolved gradients and explicit coarse-grid spacing.",
+    "verification": "Held-out forcing at unseen grids/depths and receiving-model energy diagnostics.",
+    "physics_mechanism": "Dimensional input/output scaling includes grid spacing; predicted fluxes enter the numerical equations.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C2"
+      ],
+      "E": "E0",
+      "A": "A0",
+      "N": [
+        "N2"
+      ]
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "Locally scaled resolved gradients and explicit coarse-grid spacing."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "The extracted offline experiment uses local dimensional scaling with velocity gradients and grid spacing. Online solver insertion is discussed separately in the paper, not coded at this endpoint."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "This record extracts instantaneous forcing reconstruction, not the distinct online integrations reported in the same source."
+      },
+      "A": {
+        "status": "supported",
+        "detail": "Passive forecast or numerical-model evaluation."
+      },
+      "N": {
+        "status": "supported",
+        "detail": "Training at 5 m and nominal 0.9 degree; evaluation at unseen depths and 0.4, 1.2 and 1.5 degree."
+      }
+    },
+    "source_locator": "Sections 3.3 and 5.1 (Offline generalization); Figure 1(b-d)",
+    "source_url": "https://arxiv.org/html/2505.08900v6",
+    "source_version": "arXiv:2505.08900v6, 24 September 2025; companion to GRL 52, e2025GL117046",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "At the unseen 0.4-degree grid, forcing-norm R-squared is -2.71 with fixed normalization and 0.87 with dimensional scaling; both perform similarly on the training-like grid.",
+    "next_test": "Compare local scale-aware forcing, mean circulation and spectra together in complex coastal grids.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "Training at 5 m and nominal 0.9 degree; evaluation at unseen depths and 0.4, 1.2 and 1.5 degree.",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "ANN with fixed normalization trained on the same depth and resolution",
+    "result_locator": "arXiv:2505.08900v6, Section 5.1; Figure 1(c): forcing norm at 5 m, nominal 0.4-degree grid",
+    "review_interpretation": "Explicit dimensional scaling distinguishes amplitude transfer from pattern correlation.",
+    "extraction_checked_on": "2026-09-15",
+    "source_checked_at": "2026-09-15"
+  },
+  {
+    "configuration_id": "FINN-OFFLINE",
+    "source_id": "finn",
+    "citation_key": "finn2023seaiceSubgrid",
+    "configuration_label": "Finn et al. / offline",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "sea_ice",
+      "parameterization"
+    ],
+    "task": "Offline sea-ice model-error inference",
+    "evaluation_setting": "D",
+    "variables": "Nine dynamic sea-ice variables including stress and damage",
+    "grid": "4 km reference, 8 km model; regional twin experiment",
+    "horizon": "10 min 8 s correction interval; single correction",
+    "input_support": "Initial and forecast model states mapped from triangular to Cartesian support.",
+    "verification": "High-resolution twin model; uncorrected solver and persistence.",
+    "physics_mechanism": "Standalone learned residual; no independently established physical insertion at this offline endpoint.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C0"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": []
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "Initial and forecast model states mapped from triangular to Cartesian support."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Standalone learned residual; no independently established physical insertion at this offline endpoint."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "The retained residual corrects a forecast at a positive lead of 10 min 8 s; offline evaluation does not make it same-time reconstruction."
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "unassessed",
+        "detail": "No N facet is assigned from this targeted check; this is not a negative finding."
+      }
+    },
+    "source_locator": "Section 5.1 and Conclusions; Sections 2-3 for the model and training",
+    "source_url": "https://tc.copernicus.org/articles/17/2965/2023/",
+    "source_version": "The Cryosphere 17, 2965-2991 (2023); publisher HTML",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "A single learned correction reduces forecast errors by more than 75% on average over the evaluated variables at the 10 min 8 s training lead.",
+    "next_test": "Test longer integrations and other damage/forcing regimes; do not infer seasonal ice skill from an hour-long dynamical test.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "Uncorrected 8-km forecast against 4-km twin-model reference",
+    "result_locator": "Section 5.1 and Conclusions",
+    "review_interpretation": "This isolates short-time residual prediction before repeated solver feedback.",
+    "extraction_checked_on": "2026-09-15"
+  },
+  {
+    "configuration_id": "FINN-ONLINE",
+    "source_id": "finn",
+    "citation_key": "finn2023seaiceSubgrid",
+    "configuration_label": "Finn et al. / online",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "sea_ice",
+      "parameterization"
+    ],
+    "task": "Repeated sea-ice model-error correction",
+    "evaluation_setting": "S",
+    "variables": "Nine dynamic sea-ice variables including stress and damage",
+    "grid": "4 km reference, 8 km model; regional twin experiment",
+    "horizon": "10 min 8 s correction interval; rollouts tested up to 1 h",
+    "input_support": "Initial and forecast model states mapped from triangular to Cartesian support.",
+    "verification": "High-resolution twin model; uncorrected solver and persistence.",
+    "physics_mechanism": "Correction applied repeatedly with the Maxwell elasto-brittle dynamical solver.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C3"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": []
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "Initial and forecast model states mapped from triangular to Cartesian support."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Correction applied repeatedly with the Maxwell elasto-brittle dynamical solver."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Repeated sea-ice model-error correction; 10 min 8 s correction interval; rollouts tested up to 1 h"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "unassessed",
+        "detail": "No N facet is assigned from this targeted check; this is not a negative finding."
+      }
+    },
+    "source_locator": "Section 5.3 and Discussion; Sections 2-3 for the model and training",
+    "source_url": "https://tc.copernicus.org/articles/17/2965/2023/",
+    "source_version": "The Cryosphere 17, 2965-2991 (2023); publisher HTML",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "Applying the correction every 10 min 8 s improves dynamical forecasts out to the one-hour evaluation horizon, with residual errors evolving along the corrected trajectory.",
+    "next_test": "Test longer integrations and other damage/forcing regimes; do not infer seasonal ice skill from an hour-long dynamical test.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "Uncorrected solver and persistence on the high-resolution twin-model test",
+    "result_locator": "Section 5.3 and Discussion",
+    "review_interpretation": "Trajectory-dependent residuals motivate training and evaluation with the receiving dynamics.",
+    "extraction_checked_on": "2026-09-15"
+  },
+  {
+    "configuration_id": "GREGORY-G23",
+    "source_id": "gregory",
+    "citation_key": "gregory2024onlineice",
+    "configuration_label": "Gregory et al. / g23",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "sea_ice",
+      "bias_correction"
+    ],
+    "task": "Online sea-ice concentration bias correction",
+    "evaluation_setting": "S",
+    "variables": "Sea-ice category concentrations in MOM6-SIS2",
+    "grid": "1 degree global ice-ocean configuration",
+    "horizon": "2018-2022; correction every 5 days",
+    "input_support": "Model state/tendencies; observed increments used for 1982-2017 training; prescribed JRA55-do atmosphere.",
+    "verification": "Satellite SIC; FREE and data-assimilating simulations; common test interval.",
+    "physics_mechanism": "CNN corrections change the prognostic ice state during integration; original offline-trained weights used.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C3"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": []
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "Model state/tendencies; observed increments used for 1982-2017 training; prescribed JRA55-do atmosphere."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "CNN corrections change the prognostic ice state during integration; original offline-trained weights used."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Online sea-ice concentration bias correction; 2018-2022; correction every 5 days"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "unassessed",
+        "detail": "No N facet is assigned from this targeted check; this is not a negative finding."
+      }
+    },
+    "source_locator": "Sections 2.1-2.3, 3.1 and 3.2.2",
+    "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023GL106776",
+    "source_version": "GRL 51, e2023GL106776 (2024); publisher HTML",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "The original offline-trained network reduces sea-ice-concentration bias in both hemispheres, but substantial summertime errors remain.",
+    "next_test": "Run genuinely initialized forecasts and separately audit the SST restoring and observational lineage.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "Free-running ice-ocean model; data-assimilating simulation",
+    "result_locator": "Section 3.1; archived arXiv:2310.02488v1 Results",
+    "review_interpretation": "The training distribution of assimilation increments differs from that encountered after repeated correction.",
+    "extraction_checked_on": "2026-09-15"
+  },
+  {
+    "configuration_id": "GREGORY-OPT",
+    "source_id": "gregory",
+    "citation_key": "gregory2024onlineice",
+    "configuration_label": "Gregory et al. / opt",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "sea_ice",
+      "bias_correction"
+    ],
+    "task": "Online sea-ice concentration bias correction",
+    "evaluation_setting": "S",
+    "variables": "Sea-ice category concentrations in MOM6-SIS2",
+    "grid": "1 degree global ice-ocean configuration",
+    "horizon": "2018-2022; correction every 5 days",
+    "input_support": "Model state/tendencies; observed increments used for 1982-2017 training; prescribed JRA55-do atmosphere.",
+    "verification": "Satellite SIC; FREE and data-assimilating simulations; common test interval.",
+    "physics_mechanism": "CNN corrections change the prognostic ice state during integration; weights refined with three training-period augmentation iterations.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C3"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": []
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "Model state/tendencies; observed increments used for 1982-2017 training; prescribed JRA55-do atmosphere."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "CNN corrections change the prognostic ice state during integration; weights refined with three training-period augmentation iterations."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "Online sea-ice concentration bias correction; 2018-2022; correction every 5 days"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "The retained endpoint is passive prediction or a numerical-model diagnostic, not action selection."
+      },
+      "N": {
+        "status": "unassessed",
+        "detail": "No N facet is assigned from this targeted check; this is not a negative finding."
+      }
+    },
+    "source_locator": "Sections 2.1-2.3, 3.1 and 3.2.2",
+    "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023GL106776",
+    "source_version": "GRL 51, e2023GL106776 (2024); publisher HTML",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "Three training-period augmentation cycles improve the online correction, especially summer ice-edge errors, relative to the original network.",
+    "next_test": "Run genuinely initialized forecasts and separately audit the SST restoring and observational lineage.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "",
+    "probability_assessment": "",
+    "calibration_quality": "not_assessed",
+    "comparator": "Original CNN_G23; free-running and data-assimilating simulations",
+    "result_locator": "Sections 3.2.1-3.2.2; archived arXiv:2310.02488v1 Results",
+    "review_interpretation": "Retraining on corrected trajectories addresses a concrete feedback-induced distribution change.",
+    "extraction_checked_on": "2026-09-15"
+  },
+  {
+    "configuration_id": "GREGORY-CPL",
+    "source_id": "gregory_coupled",
+    "citation_key": "gregory2026coupled",
+    "configuration_label": "Sea-ice correction / fully coupled seasonal reforecasts",
+    "record_role": "learning_method",
+    "domain_tags": [
+      "ocean",
+      "ensemble_forecasting"
+    ],
+    "task": "Initialized seasonal sea-ice prediction",
+    "evaluation_setting": "S",
+    "variables": "Sea-ice concentration and extent in coupled SPEAR",
+    "grid": "Global coupled atmosphere-ice-ocean model",
+    "horizon": "72 monthly initialized one-year reforecasts, 2018-2023",
+    "input_support": "CNNs trained on assimilation increments from either prescribed-atmosphere ice-ocean runs or a nudged fully coupled configuration; free coupled evaluation.",
+    "verification": "NSIDC NASA Team sea-ice observations; ensemble-mean diagnostics and spread-skill analysis.",
+    "physics_mechanism": "Learned ice corrections operate within coupled ice-ocean-atmosphere feedbacks.",
+    "axes": {
+      "O": "O0",
+      "C": [
+        "C3"
+      ],
+      "E": "E1",
+      "A": "A0",
+      "N": [
+        "N1",
+        "N2"
+      ]
+    },
+    "axis_evidence": {
+      "O": {
+        "status": "supported",
+        "detail": "CNNs trained on assimilation increments from either prescribed-atmosphere ice-ocean runs or a nudged fully coupled configuration; free coupled evaluation."
+      },
+      "C": {
+        "status": "supported",
+        "detail": "Learned ice corrections operate within coupled ice-ocean-atmosphere feedbacks."
+      },
+      "E": {
+        "status": "supported",
+        "detail": "72 monthly initialized one-year reforecasts, 2018-2023"
+      },
+      "A": {
+        "status": "supported",
+        "detail": "Passive forecast or numerical-model evaluation."
+      },
+      "N": {
+        "status": "supported",
+        "detail": "Ensemble-mean errors and the RMSE-to-spread diagnostic in Figure S3. Reference: ice-ocean-trained corrections; contrast: coupled-training corrections under the same free coupled forecast setting."
+      }
+    },
+    "source_locator": "Results: seasonal skill and out-of-sample behaviour; Discussion; Figure S3",
+    "source_url": "https://arxiv.org/html/2505.18328v1",
+    "source_version": "arXiv:2505.18328v1, 23 May 2025 (exact extraction source); publication: Science Advances 12(1), eady8957 (2026)",
+    "evidence_independence": "UNKNOWN",
+    "independence_basis": "No separate external-replication or external-audit assessment was performed.",
+    "reported_result": "Coupled-training corrections improve Arctic and Antarctic winter prediction; ice-ocean-trained corrections can trigger near-ice-free Antarctic summers. The improved ensemble remains underdispersive.",
+    "next_test": "Evaluate robustness to coupled biases and improve spread without losing the corrected mean state.",
+    "extension_type": "reviewer_proposed_test",
+    "author_overclaim": "not_assessed",
+    "shift_contract": "Reference: ice-ocean-trained corrections; contrast: coupled-training corrections under the same free coupled forecast setting.",
+    "probability_assessment": "Ensemble-mean errors and the RMSE-to-spread diagnostic in Figure S3.",
+    "calibration_quality": "underdispersive",
+    "comparator": "Uncorrected SPEAR and corrections trained in a prescribed-atmosphere ice-ocean configuration",
+    "result_locator": "arXiv v1 Results, Seasonal prediction skill and Component vs coupled training; Discussion; Figure S3",
+    "review_interpretation": "The training feedback structure becomes consequential when restoring constraints are removed.",
+    "extraction_checked_on": "2026-09-15",
+    "source_checked_at": "2026-09-15"
+  }
+]

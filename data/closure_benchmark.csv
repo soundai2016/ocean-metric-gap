@@ -1,0 +1,6 @@
+grid_denominator,grid_degree,no_parameterization_rmse_m,unscaled_rmse_m,ke_tuned_rmse_m,source_id,source_table,source_version,uncertainty,interpretation
+4,0.25,0.278,0.2202,0.2034,zhang,Table 2,arXiv:2303.00962v1,not reported in the source table,"time-mean SSH RMSE against fine-grid numerical reference; tuning is in-sample for KE, not a blind transfer test"
+5,0.2,0.2093,0.1827,0.1706,zhang,Table 2,arXiv:2303.00962v1,not reported in the source table,"time-mean SSH RMSE against fine-grid numerical reference; tuning is in-sample for KE, not a blind transfer test"
+6,0.16666666666666666,0.1432,0.1305,0.1253,zhang,Table 2,arXiv:2303.00962v1,not reported in the source table,"time-mean SSH RMSE against fine-grid numerical reference; tuning is in-sample for KE, not a blind transfer test"
+7,0.14285714285714285,0.1167,0.1088,0.1001,zhang,Table 2,arXiv:2303.00962v1,not reported in the source table,"time-mean SSH RMSE against fine-grid numerical reference; tuning is in-sample for KE, not a blind transfer test"
+8,0.125,0.0971,0.0905,0.0891,zhang,Table 2,arXiv:2303.00962v1,not reported in the source table,"time-mean SSH RMSE against fine-grid numerical reference; tuning is in-sample for KE, not a blind transfer test"

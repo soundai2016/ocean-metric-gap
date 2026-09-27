@@ -1,0 +1,251 @@
+{
+  "algorithm": 1,
+  "scope": "measurement_plan_only",
+  "plans": [
+    {
+      "record_id": "mom6_closure_followup",
+      "claimed_tests": [
+        3
+      ],
+      "comparison_target": "matched_information",
+      "checks": [
+        {
+          "id": "specification",
+          "algorithm_line": 1,
+          "reporting_items": [
+            "M01",
+            "M02",
+            "M03",
+            "M04"
+          ],
+          "action": "Record issue-time inputs, state support, learned target, and receiving equations.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        },
+        {
+          "id": "comparator",
+          "algorithm_line": 2,
+          "reporting_items": [
+            "M06"
+          ],
+          "action": "Hold admissible inputs fixed and identify remaining numerical differences.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        },
+        {
+          "id": "verification_design",
+          "algorithm_line": 3,
+          "reporting_items": [
+            "M07",
+            "M08"
+          ],
+          "action": "Fix support, diagnostic, tolerance, and independent comparison unit before testing.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        },
+        {
+          "id": "coupled",
+          "algorithm_line": 7,
+          "reporting_items": [
+            "M04",
+            "M05",
+            "M07"
+          ],
+          "action": "Run coupled controls; measure work, inventories, drift, and forced response.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        },
+        {
+          "id": "correction_budget",
+          "algorithm_line": 9,
+          "reporting_items": [
+            "M04",
+            "M05"
+          ],
+          "action": "Record before/after inventories, physical fluxes, increments, and residuals.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        },
+        {
+          "id": "transfer_frozen",
+          "algorithm_line": 11,
+          "reporting_items": [
+            "M06",
+            "M09"
+          ],
+          "action": "Test frozen parameters after changing: horizontal grid spacing.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        },
+        {
+          "id": "transfer_retuned",
+          "algorithm_line": 11,
+          "reporting_items": [
+            "M06",
+            "M09"
+          ],
+          "action": "Report any retuned result separately for: horizontal grid spacing.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        },
+        {
+          "id": "assessment",
+          "algorithm_line": 12,
+          "reporting_items": [
+            "M07",
+            "M08",
+            "M09"
+          ],
+          "action": "Compare measurements with the declared criterion; leave missing tests unresolved.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        },
+        {
+          "id": "release",
+          "algorithm_line": 13,
+          "reporting_items": [
+            "M10"
+          ],
+          "action": "Report measurements, missing tests and the versioned M01-M10 record.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        }
+      ],
+      "reporting_items": [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05",
+        "M06",
+        "M07",
+        "M08",
+        "M09",
+        "M10"
+      ],
+      "scope": "measurement_plan_only",
+      "experiment_results_evaluated": false
+    },
+    {
+      "record_id": "prescribed_acoustic_operator",
+      "claimed_tests": [
+        4
+      ],
+      "comparison_target": "matched_information",
+      "checks": [
+        {
+          "id": "specification",
+          "algorithm_line": 1,
+          "reporting_items": [
+            "M01",
+            "M02",
+            "M03",
+            "M04"
+          ],
+          "action": "Record issue-time inputs, state support, learned target, and receiving equations.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        },
+        {
+          "id": "comparator",
+          "algorithm_line": 2,
+          "reporting_items": [
+            "M06"
+          ],
+          "action": "Hold admissible inputs fixed and identify remaining numerical differences.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        },
+        {
+          "id": "verification_design",
+          "algorithm_line": 3,
+          "reporting_items": [
+            "M07",
+            "M08"
+          ],
+          "action": "Fix support, diagnostic, tolerance, and independent comparison unit before testing.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        },
+        {
+          "id": "downstream",
+          "algorithm_line": 8,
+          "reporting_items": [
+            "M02",
+            "M07",
+            "M10"
+          ],
+          "action": "Fix the physical operator and geometry; propagate each environmental estimate.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        },
+        {
+          "id": "assessment",
+          "algorithm_line": 12,
+          "reporting_items": [
+            "M07",
+            "M08",
+            "M09"
+          ],
+          "action": "Compare measurements with the declared criterion; leave missing tests unresolved.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        },
+        {
+          "id": "release",
+          "algorithm_line": 13,
+          "reporting_items": [
+            "M10"
+          ],
+          "action": "Report measurements, missing tests and the versioned M01-M10 record.",
+          "status": "pending",
+          "criterion": null,
+          "result": null,
+          "source_locator": null
+        }
+      ],
+      "reporting_items": [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05",
+        "M06",
+        "M07",
+        "M08",
+        "M09",
+        "M10"
+      ],
+      "scope": "measurement_plan_only",
+      "experiment_results_evaluated": false
+    }
+  ]
+}

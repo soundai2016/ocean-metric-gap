@@ -1,0 +1,205 @@
+{
+  "spec": {
+    "kind": "constructed_periodic_passive_tracer_experiment",
+    "length_m": 100000.0,
+    "velocity_mps": 0.1,
+    "diffusivity_m2ps": 100.0,
+    "target_days": 5.0,
+    "receiver_centre_m": 62500.0,
+    "receiver_concentration": 10.0,
+    "amplitude_a": 0.04,
+    "amplitude_b": 0.05,
+    "phase_b_cosine": 0.2,
+    "bias_cancellation_fraction": 0.5,
+    "background_concentration": 1.0,
+    "reference_cosine_amplitude": 0.2,
+    "grid_sizes": [
+      64,
+      128,
+      256,
+      512,
+      1024
+    ],
+    "report_grid_size": 256,
+    "dense_check_grid_size": 64,
+    "output_days": [
+      0.0,
+      10.0,
+      0.05
+    ],
+    "selection": "Perturbations are constructed algebraically for the specified five-day functional. They are not fitted or selected from forecast data.",
+    "units": "Concentration and its errors are dimensionless; spatial inventories are concentration times metres per unit cross-sectional area."
+  },
+  "analytic_gain": 1.131176879701122,
+  "analytic_output_errors": {
+    "A": 0.045247075188044876,
+    "B": 0.01131176879701122,
+    "after_projection": 0.045247075188044876,
+    "before_projection": 0.022623537594022438
+  },
+  "summary": [
+    {
+      "case": "A",
+      "initial_field_rms": 0.04000000000000001,
+      "initial_mean_error": -3.469446951953614e-18,
+      "output_error": 0.045247460877735186,
+      "squared_output_error": 0.0020473327158821763,
+      "analytic_output_error": 0.045247075188044876,
+      "output_discretization_error": 3.856896903103868e-07,
+      "relative_mass_drift": 1.4551915228366853e-16
+    },
+    {
+      "case": "B",
+      "initial_field_rms": 0.05,
+      "initial_mean_error": -1.0408340855860843e-17,
+      "output_error": 0.01129676375919349,
+      "squared_output_error": 0.00012761687143102746,
+      "analytic_output_error": 0.01131176879701122,
+      "output_discretization_error": 1.5005037817730077e-05,
+      "relative_mass_drift": 1.4551915228366853e-16
+    },
+    {
+      "case": "before_projection",
+      "initial_field_rms": 0.045954591209890525,
+      "initial_mean_error": -0.02262353759402244,
+      "output_error": 0.022623923283712752,
+      "squared_output_error": 0.00051184190474732,
+      "analytic_output_error": 0.022623537594022438,
+      "output_discretization_error": 3.8568969031385625e-07,
+      "relative_mass_drift": 2.977750291334999e-16
+    },
+    {
+      "case": "after_projection",
+      "initial_field_rms": 0.04000000000000001,
+      "initial_mean_error": 0.0,
+      "output_error": 0.04524746087773519,
+      "squared_output_error": 0.0020473327158821767,
+      "analytic_output_error": 0.045247075188044876,
+      "output_discretization_error": 3.856896903173257e-07,
+      "relative_mass_drift": 2.9103830456733706e-16
+    }
+  ],
+  "convergence": [
+    {
+      "grid_size": 64,
+      "grid_spacing_m": 1562.5,
+      "max_output_error": 0.00024010279607908878,
+      "order_from_previous": null
+    },
+    {
+      "grid_size": 128,
+      "grid_spacing_m": 781.25,
+      "max_output_error": 6.002129073942944e-05,
+      "order_from_previous": 2.000105955246441
+    },
+    {
+      "grid_size": 256,
+      "grid_spacing_m": 390.625,
+      "max_output_error": 1.5005037817730077e-05,
+      "order_from_previous": 2.0000273889673417
+    },
+    {
+      "grid_size": 512,
+      "grid_spacing_m": 195.3125,
+      "max_output_error": 3.7512415040005798e-06,
+      "order_from_previous": 2.0000069035643673
+    },
+    {
+      "grid_size": 1024,
+      "grid_spacing_m": 97.65625,
+      "max_output_error": 9.378092517796366e-07,
+      "order_from_previous": 2.000001729462977
+    }
+  ],
+  "metrics": {
+    "Q": [
+      [
+        1.0,
+        0.39623100017106616,
+        1.0595206637684513
+      ],
+      [
+        0.39623100017106616,
+        0.15699900549656343,
+        0.4198149323068854
+      ],
+      [
+        1.0595206637684513,
+        0.4198149323068854,
+        1.1225840369523397
+      ]
+    ],
+    "W": [
+      [
+        1.0,
+        -1.3444106938820255e-16,
+        -1.866860615748478e-16
+      ],
+      [
+        -1.3444106938820255e-16,
+        1.0,
+        4.909684103491775e-17
+      ],
+      [
+        -1.866860615748478e-16,
+        4.909684103491775e-17,
+        1.0000000000000002
+      ]
+    ],
+    "C": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "N": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "restricted": {
+      "generalized_eigenvalues": [
+        -2.7755575615628914e-17,
+        1.2795830424489032
+      ],
+      "relative_tolerance": 1e-10,
+      "proportional_within_tolerance": false,
+      "positive_proportional_metric": false,
+      "resolved_anisotropy": true
+    },
+    "projection": {
+      "commutator_relative_norm": 0.4962252056101635,
+      "maximum_loss_increase_per_unit_field_squared": 0.7367631311002518,
+      "nonincreasing_within_tolerance": false,
+      "witness": [
+        0.5457649983803301,
+        -0.29351225928428193,
+        -0.7848510178325276
+      ],
+      "witness_field_squared_before": 1.0000000000000002,
+      "witness_field_squared_after": 0.7021405665429186,
+      "witness_downstream_before": 0.16168403126353018,
+      "witness_downstream_after": 0.8984471623637841,
+      "relative_tolerance": 1e-10
+    }
+  },
+  "dense_exponential_max_abs_error": 9.992007221626409e-15,
+  "maximum_relative_mass_drift": 2.9777502913349993e-16,
+  "maximum_relative_variance_budget_residual": 4.660977839760264e-15,
+  "minimum_concentration": 0.729930973633828,
+  "field_rms_ratio_A_over_B": 0.8000000000000002,
+  "output_error_ratio_A_over_B": 4.005347181037761,
+  "projection_field_rms_ratio": 0.8704244548124944,
+  "projection_squared_output_ratio": 3.9999318088128786,
+  "origin": "new deterministic calculation; no trained predictor or forecast archive"
+}

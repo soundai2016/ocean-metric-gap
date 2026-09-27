@@ -1,0 +1,39 @@
+{
+  "kind": "manufactured_diagnostic_checks",
+  "new_ocean_simulations": false,
+  "kinetic_increment_example": {
+    "linear_energy_j": 0.0,
+    "quadratic_energy_j": 0.020000000000000004,
+    "total_energy_j": 0.020000000000000004,
+    "direct_energy_j": 0.02000000000000024,
+    "effective_power_w": 0.0020000000000000005
+  },
+  "inventory_example": {
+    "physical_only_residual": [
+      3.0,
+      -1.0
+    ],
+    "corrected_residual": [
+      0.0,
+      0.0
+    ],
+    "cumulative_physical_only_residual": [
+      3.0,
+      2.0
+    ],
+    "cumulative_corrected_residual": [
+      0.0,
+      0.0
+    ],
+    "cumulative_applied_increment": [
+      3.0,
+      2.0
+    ],
+    "max_abs_corrected_residual": 0.0
+  },
+  "assumptions": [
+    "fixed cell masses for kinetic update",
+    "interval-average inward flux, not point samples",
+    "correction increments reported separately from physical sources"
+  ]
+}

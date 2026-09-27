@@ -1,0 +1,142 @@
+{
+  "spec": {
+    "perturbation_basis": "1, sqrt(2) cos(j pi z/H), j=1,...,d-1",
+    "dimension": 8,
+    "dimension_checks": [
+      4,
+      8,
+      12
+    ],
+    "frequency_hz": 100.0,
+    "source_depth_m": 50.0,
+    "ranges_m": [
+      10000.0,
+      20000.0,
+      30000.0
+    ],
+    "derivative_step_mps": 0.001,
+    "derivative_check_step_mps": 0.0005,
+    "report_basis_size": 128,
+    "check_basis_size": 192,
+    "witness_amplitudes_mps": [
+      0.001,
+      0.002,
+      0.005,
+      0.01,
+      0.025,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "bound_test_amplitude_mps": 0.01,
+    "bound_threshold_factors": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "selection": "The extreme generalized eigendirections define the pairs. All specified amplitudes and ranges are retained.",
+    "interpretation": "The cosine space is an error representation, not a conservation constraint on sound speed.",
+    "derivative_stencil": "fourth-order centered, offsets -2,-1,+1,+2"
+  },
+  "checks": [
+    {
+      "range_m": 10000.0,
+      "relative_Q_step_difference": 1.3277329435998342e-08,
+      "relative_Q_basis_difference": 2.271614559029124e-08,
+      "relative_lambda_min_step_difference": 6.231820251906233e-08,
+      "relative_lambda_min_basis_difference": 1.7477055754467319e-07,
+      "lambda_min": 0.0006643460695751476,
+      "lambda_max": 10.79692885427548,
+      "norm_ratio_threshold": 0.007844171227798638
+    },
+    {
+      "range_m": 20000.0,
+      "relative_Q_step_difference": 3.280149853467702e-08,
+      "relative_Q_basis_difference": 2.525050866309735e-08,
+      "relative_lambda_min_step_difference": 3.426768268373044e-07,
+      "relative_lambda_min_basis_difference": 2.470309105028973e-07,
+      "lambda_min": 0.0001321165925745898,
+      "lambda_max": 50.191641097914975,
+      "norm_ratio_threshold": 0.0016224188525096397
+    },
+    {
+      "range_m": 30000.0,
+      "relative_Q_step_difference": 1.3299456880069344e-07,
+      "relative_Q_basis_difference": 2.0525952203180128e-08,
+      "relative_lambda_min_step_difference": 5.1104650345137704e-08,
+      "relative_lambda_min_basis_difference": 3.5976380219936526e-07,
+      "lambda_min": 0.0007385390629947579,
+      "lambda_max": 96.80091354136617,
+      "norm_ratio_threshold": 0.002762148397960431
+    }
+  ],
+  "dimensions": [
+    {
+      "dimension": 4,
+      "range_m": 10000.0,
+      "lambda_min": 0.006762899915728416,
+      "lambda_max": 10.786812893358787,
+      "norm_ratio_threshold": 0.02503916876753532
+    },
+    {
+      "dimension": 4,
+      "range_m": 20000.0,
+      "lambda_min": 0.013384427867739489,
+      "lambda_max": 50.14655839257092,
+      "norm_ratio_threshold": 0.016337264472713012
+    },
+    {
+      "dimension": 4,
+      "range_m": 30000.0,
+      "lambda_min": 0.005840486414094637,
+      "lambda_max": 96.68488215619493,
+      "norm_ratio_threshold": 0.007772222464050553
+    },
+    {
+      "dimension": 8,
+      "range_m": 10000.0,
+      "lambda_min": 0.0006643460695751559,
+      "lambda_max": 10.796928854275478,
+      "norm_ratio_threshold": 0.007844171227798688
+    },
+    {
+      "dimension": 8,
+      "range_m": 20000.0,
+      "lambda_min": 0.00013211659257460884,
+      "lambda_max": 50.19164109791497,
+      "norm_ratio_threshold": 0.0016224188525097568
+    },
+    {
+      "dimension": 8,
+      "range_m": 30000.0,
+      "lambda_min": 0.0007385390629948038,
+      "lambda_max": 96.80091354136619,
+      "norm_ratio_threshold": 0.0027621483979605164
+    },
+    {
+      "dimension": 12,
+      "range_m": 10000.0,
+      "lambda_min": 0.0001773977887018259,
+      "lambda_max": 10.797818637398969,
+      "norm_ratio_threshold": 0.004053275154851578
+    },
+    {
+      "dimension": 12,
+      "range_m": 20000.0,
+      "lambda_min": 0.00010224689400704519,
+      "lambda_max": 50.19364942834308,
+      "norm_ratio_threshold": 0.001427252050241924
+    },
+    {
+      "dimension": 12,
+      "range_m": 30000.0,
+      "lambda_min": 3.0102221006091697e-05,
+      "lambda_max": 96.81997142004629,
+      "norm_ratio_threshold": 0.000557592334825036
+    }
+  ],
+  "witness_rows": 24,
+  "full_reversals": 24,
+  "small_amplitude_max_quadratic_relative_error": 0.01359411966647601,
+  "origin": "new finite-difference receiver sensitivities and recomputed modal fields"
+}
